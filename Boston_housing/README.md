@@ -13,17 +13,27 @@ The dataset for this project originates from the UCI Machine Learning Repository
 - The feature 'MEDV' has been multiplicatively scaled to account for 35 years of market inflation.
 
 Run the code cell below to load the Boston housing dataset, along with a few of the necessary Python libraries required for this project. You will know the dataset loaded successfully if the size of the dataset is reported.
-This project requires **Python 2.7**(if you complete this project in Python 3.x, you will have to update the code in various places including all relevant print statements) and the following Python libraries installed:
 
-- [NumPy](http://www.numpy.org/)
-- [Pandas](http://pandas.pydata.org/)
-- [matplotlib](http://matplotlib.org/)
-- [scikit-learn](http://scikit-learn.org/stable/)
+```bash
+# Import libraries necessary for this project
+import numpy as np
+import pandas as pd
+from sklearn.cross_validation import ShuffleSplit
 
-You will also need to have software installed to run and execute a [Jupyter Notebook](http://ipython.org/notebook.html)
+# Import supplementary visualizations code visuals.py
+import visuals as vs
 
-If you do not have Python installed yet, it is highly recommended that you install the [Anaconda](http://continuum.io/downloads) distribution of Python, which already has the above packages and more included. Make sure that you select the Python 2.7 installer and not the Python 3.x installer.
+# Pretty display for notebooks
+%matplotlib inline
 
+# Load the Boston housing dataset
+data = pd.read_csv('housing.csv')
+prices = data['MEDV']
+features = data.drop('MEDV', axis = 1)
+    
+# Success
+print "Boston housing dataset has {} data points with {} variables each.".format(*data.shape)
+```
 ### Code
 
 Template code is provided in the `boston_housing.ipynb` notebook file. You will also be required to use the included `visuals.py` Python file and the `housing.csv` dataset file to complete your work. While some code has already been implemented to get you started, you will need to implement additional functionality when requested to successfully complete the project. Note that the code included in `visuals.py` is meant to be used out-of-the-box and not intended for students to manipulate. If you are interested in how the visualizations are created in the notebook, please feel free to explore this Python file.
