@@ -86,3 +86,4 @@ Before data can be used as input for machine learning algorithms, it often must 
 A dataset may sometimes contain at least one feature whose values tend to lie near a single number, but will also have a non-trivial number of vastly larger or smaller values than that single number. Algorithms can be sensitive to such distributions of values and can underperform if the range is not properly normalized. With the census dataset two features fit this description: 'capital-gain' and  'capital-loss'.
 
 Run the code cell below to plot a histogram of these two features. Note the range of the values present and how they are distributed.
+
