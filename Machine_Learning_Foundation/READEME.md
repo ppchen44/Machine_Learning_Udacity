@@ -12,3 +12,30 @@ The dataset for this project originates from the UCI Machine Learning Repository
 - The features 'RM', 'LSTAT', 'PTRATIO', and 'MEDV' are essential. The remaining **non-relevant features** have been excluded.
 - The feature 'MEDV' has been **multiplicatively scaled** to account for 35 years of market inflation.
 Run the code cell below to load the Boston housing dataset, along with a few of the necessary Python libraries required for this project. You will know the dataset loaded successfully if the size of the dataset is reported.
+
+Run the code cell below to load the Boston housing dataset, along with a few of the necessary Python libraries required for this project. You will know the dataset loaded successfully if the size of the dataset is reported.
+
+```
+# Import libraries necessary for this project
+import numpy as np
+import pandas as pd
+from sklearn.cross_validation import ShuffleSplit
+
+# Import supplementary visualizations code visuals.py
+import visuals as vs
+
+# Pretty display for notebooks
+%matplotlib inline
+
+# Load the Boston housing dataset
+data = pd.read_csv('housing.csv')
+prices = data['MEDV']
+features = data.drop('MEDV', axis = 1)
+    
+# Success
+print "Boston housing dataset has {} data points with {} variables each.".format(*data.shape)
+```
+
+```
+Boston housing dataset has 489 data points with 4 variables each.
+```
