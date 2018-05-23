@@ -1,8 +1,8 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 
-Pingping Chen
-April 15th, 2018
+### Pingping Chen
+### April 15th, 2018
 
 ## Domain Background
 
