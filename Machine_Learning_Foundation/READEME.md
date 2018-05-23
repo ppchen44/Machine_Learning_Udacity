@@ -39,3 +39,16 @@ print "Boston housing dataset has {} data points with {} variables each.".format
 ```
 Boston housing dataset has 489 data points with 4 variables each.
 ```
+
+## Data Exploration
+In this first section of this project, you will make a cursory investigation about the Boston housing data and provide your observations. Familiarizing yourself with the data through an explorative process is a fundamental practice to help you better understand and justify your results.
+
+Since the main goal of this project is to construct a working model which has the capability of predicting the value of houses, we will need to separate the dataset into **features** and the **target variable**. The **features**, 'RM', 'LSTAT', and 'PTRATIO', give us quantitative information about each data point. The **target variable**, 'MEDV', will be the variable we seek to predict. These are stored in features and prices, respectively.
+
+### Implementation: Calculate Statistics
+For your very first coding implementation, you will calculate descriptive statistics about the Boston housing prices. Since numpy has already been imported for you, use this library to perform the necessary calculations. These statistics will be extremely important later on to analyze various prediction results from the constructed model.
+
+In the code cell below, you will need to implement the following:
+
+- Calculate the minimum, maximum, mean, median, and standard deviation of 'MEDV', which is stored in prices.
+ - Store each calculation in their respective variable.
