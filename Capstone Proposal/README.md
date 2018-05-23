@@ -27,11 +27,11 @@ I will apply Multiple Regression as the benchmark model because it is the simple
 ## Evaluation Metrics
 
 In this project, one of evaluation metrics is Mean Absolute Error between the predicted log error and the actual log error. As I mentioned how to calculate log error in problem statement part, the Mean Absolute Error is defined as
-'|log(actual) - log(predicted)|'
+`|log(actual) - log(predicted)|`
 And it is obvious to see that smaller Mean Absolute Error means better model performance.
 
 Another evaluation metric is Mean Squared Error between the predicted log error and the actual log error, and it can be defined as
-i=1n(logerror(actual) - logerror(predicted))2n
+`i=1n(logerror(actual) - logerror(predicted))2n`
 The better model will with smaller number of Mean Squared Error. 
 
 Project Design
