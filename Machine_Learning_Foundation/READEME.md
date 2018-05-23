@@ -52,3 +52,72 @@ In the code cell below, you will need to implement the following:
 
 - Calculate the minimum, maximum, mean, median, and standard deviation of 'MEDV', which is stored in prices.
 - Store each calculation in their respective variable.
+
+```
+# TODO: Minimum price of the data
+minimum_price = np.min(prices)
+
+# TODO: Maximum price of the data
+maximum_price = np.max(prices)
+
+# TODO: Mean price of the data
+mean_price = np.mean(prices)
+
+# TODO: Median price of the data
+median_price = np.median(prices)
+
+# TODO: Standard deviation of prices of the data
+std_price = np.std(prices)
+
+# Show the calculated statistics
+print "Statistics for Boston housing dataset:\n"
+print "Minimum price: ${:,.2f}".format(minimum_price)
+print "Maximum price: ${:,.2f}".format(maximum_price)
+print "Mean price: ${:,.2f}".format(mean_price)
+print "Median price ${:,.2f}".format(median_price)
+print "Standard deviation of prices: ${:,.2f}".format(std_price)
+```
+
+```
+Statistics for Boston housing dataset:
+
+Minimum price: $105,000.00
+Maximum price: $1,024,800.00
+Mean price: $454,342.94
+Median price $438,900.00
+Standard deviation of prices: $165,171.13
+```
+## Question 1 - Feature Observation
+As a reminder, we are using three features from the Boston housing dataset: 'RM', 'LSTAT', and 'PTRATIO'. For each data point (neighborhood):
+
+- 'RM' is the average number of rooms among homes in the neighborhood.
+- 'LSTAT' is the percentage of homeowners in the neighborhood considered "lower class" (working poor).
+- 'PTRATIO' is the ratio of students to teachers in primary and secondary schools in the neighborhood.
+**Using your intuition, for each of the three features above, do you think that an increase in the value of that feature would lead to an** increase **in the value of** 'MEDV' **or a** decrease **in the value of** 'MEDV'? **Justify your answer for each.**
+
+**Hint**: This problem can phrased using examples like below.
+
+- Would you expect a home that has an 'RM' value(number of rooms) of 6 be worth more or less than a home that has an 'RM' value of 7?
+- Would you expect a neighborhood that has an 'LSTAT' value(percent of lower class workers) of 15 have home prices be worth more or less than a neighborhood that has an 'LSTAT' value of 20?
+- Would you expect a neighborhood that has an 'PTRATIO' value(ratio of students to teachers) of 10 have home prices be worth more or less than a neighborhood that has an 'PTRATIO' value of 15?
+
+**Answer:** In my opinion, the number of 'RM' increases will lead to an increase in the value of 'MEDV'. Larger value of 'RM', larger houses are. An increase in the value of 'LSTAT' will lead to an decrease in the value of 'MEDV'. A large value of 'LSTAT' which indicates that the price of houses is not expensive since many working poor person could afford it.
+An increase in the value of 'PTRATIO' will lead to an decrease in the value of 'MEDV'. Larger value of 'PTRATIO' indicates that primary and secondary schools in the neighborhood are not good.
+All these guesses could be verified from below graphs.
+
+```
+import matplotlib.pyplot as plt
+```
+```
+for col in features.columns:
+
+    fig, ax = plt.subplots()
+    fit = np.polyfit(features[col], prices, deg=1) # We use a linear fit to compute the trendline
+    ax.scatter(features[col],  prices)
+    plt.plot(features[col], prices, 'o', color='black')
+    ax.plot(features[col], fit[0] * features[col] + fit[1], color='blue', linewidth=3) # This plots a trendline with the regression parameters computed earlier. We should plot this after the dots or it will be covered by the dots themselves
+    plt.title('PRICES vs  '+ str(col)) # title here
+    plt.xlabel(col) # label here
+    plt.ylabel('PRICES') # label here
+ ```
+ ![alt text](https://drive.google.com/open?id=1dkD9Ka86FzDH44HCGaEOEbGhuKXLE1Cr)
