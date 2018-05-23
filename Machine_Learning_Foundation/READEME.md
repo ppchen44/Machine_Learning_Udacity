@@ -51,4 +51,4 @@ For your very first coding implementation, you will calculate descriptive statis
 In the code cell below, you will need to implement the following:
 
 - Calculate the minimum, maximum, mean, median, and standard deviation of 'MEDV', which is stored in prices.
--- Store each calculation in their respective variable.
+- Store each calculation in their respective variable.
