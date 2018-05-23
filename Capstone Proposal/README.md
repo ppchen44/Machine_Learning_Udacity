@@ -34,20 +34,17 @@ Another evaluation metric is Mean Squared Error between the predicted log error 
 `i=1n(logerror(actual) - logerror(predicted))2n`
 The better model will with smaller number of Mean Squared Error. 
 
-Project Design
-Get the dataset from Kaggle.
-Explore the dataset to know how many and what variables in there. Identify the target variable (logerror) and independent variables. 
-Exploratory data analysis to know the distributions of target variable and explanatory variables. Calculate variance-covariance matrix of variables to know which variables are highly correlated. Dealing with missing values such as ‘fireplacecnt’, I will fill in 0 to NaN because NaN means there is no fireplace in the houses. Another type variable with missing values is ‘propertylandusetypeid’, there is no any clue to know how to fill with missing values. For this kind of variable, I would conduct a knn algorithm to predict missing values based on all other variables. 
-Encode categorical variables and split the dataset into train/test sets to make the data ready for models.
-Build the benchmark model, Multiple Regression, to calculate the evaluation metrics (Mean Absolute Error and MSE)
-Build and tune the LGBM model to the best model performance (the smallest Mean Absolute Error or MSE).
-Compare the LGBM to the benchmark model and makSe conclusion. 
+## Project Design
+- Get the dataset from Kaggle.
+- Explore the dataset to know how many and what variables in there. Identify the target variable (logerror) and independent variables. 
+- Exploratory data analysis to know the distributions of target variable and explanatory variables. Calculate variance-covariance matrix of variables to know which variables are highly correlated. Dealing with missing values such as ‘fireplacecnt’, I will fill in 0 to NaN because NaN means there is no fireplace in the houses. Another type variable with missing values is ‘propertylandusetypeid’, there is no any clue to know how to fill with missing values. For this kind of variable, I would conduct a knn algorithm to predict missing values based on all other variables. 
+- Encode categorical variables and split the dataset into train/test sets to make the data ready for models.
+- Build the benchmark model, Multiple Regression, to calculate the evaluation metrics (Mean Absolute Error and MSE)
+- Build and tune the LGBM model to the best model performance (the smallest Mean Absolute Error or MSE).
+- Compare the LGBM to the benchmark model and makSe conclusion. 
 
-Reference
+## Reference
 [1] What is LightGBM, How to implement it? How to fine tune the parameters?
-
-
-
 
 Get Zillow’s Home datasets:
 https://www.kaggle.com/c/zillow-prize-1/data
