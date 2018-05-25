@@ -189,4 +189,5 @@ There are 11.000000 percent dog images with a detected face.
 **Answer:**
 
 - In my opinion, I think this is a reasonable expectation to pose on the user.
+
 We suggest the face detector from OpenCV as a potential way to detect human images in your algorithm, but you are free to explore other approaches, especially approaches that make use of deep learning :). Please use the code cell below to design and test your own face detection algorithm. If you decide to pursue this optional task, report performance on each of the datasets.
