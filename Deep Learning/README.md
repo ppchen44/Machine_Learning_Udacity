@@ -237,3 +237,12 @@ Getting the 4D tensor ready for ResNet-50, and for any other pre-trained model i
 Now that we have a way to format our image for supplying to ResNet-50, we are now ready to use the model to extract the predictions. This is accomplished with the predict method, which returns an array whose $i$-th entry is the model's predicted probability that the image belongs to the $i$-th ImageNet category. This is implemented in the `ResNet50_predict_labels` function below.
 
 By taking the argmax of the predicted probability vector, we obtain an integer corresponding to the model's predicted object class, which we can identify with an object category through the use of this dictionary.
+
+```
+from keras.applications.resnet50 import preprocess_input, decode_predictions
+
+def ResNet50_predict_labels(img_path):
+    # returns prediction vector for image located at img_path
+    img = preprocess_input(path_to_tensor(img_path))
+    return np.argmax(ResNet50_model.predict(img))
+```
