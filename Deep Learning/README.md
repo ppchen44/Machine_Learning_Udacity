@@ -268,3 +268,22 @@ def dog_detector(img_path):
 
 - There are 2 percentage of the images in human_files_short have a detected dog.
 - There are 100 percentage of the images in dog_files_short have a detected dog.
+
+
+```
+### TODO: Test the performance of the dog_detector function
+dogface_detected_in_human=[]
+dogface_detected_in_dog=[]
+for i in range(100):
+    dogface_detected_in_human.append(dog_detector(human_files_short[i]))
+    dogface_detected_in_dog.append(dog_detector(dog_files_short[i]))
+    
+print('There are %.2f%% percent human images with a detected dog face' % ((sum(dogface_detected_in_human)/100.0)*100))
+print('There are %.2f%% percent dog images with a detected dog face' % ((sum(dogface_detected_in_dog)/100.0)*100))
+
+### on the images in human_files_short and dog_files_short.
+```
+```
+There are 2.00% percent human images with a detected dog face
+There are 100.00% percent dog images with a detected dog face
+```
