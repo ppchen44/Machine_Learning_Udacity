@@ -246,3 +246,25 @@ def ResNet50_predict_labels(img_path):
     img = preprocess_input(path_to_tensor(img_path))
     return np.argmax(ResNet50_model.predict(img))
 ```
+#### Write a Dog Detector
+While looking at the dictionary, you will notice that the categories corresponding to dogs appear in an uninterrupted sequence and correspond to dictionary keys 151-268, inclusive, to include all categories from 'Chihuahua' to 'Mexican hairless'. Thus, in order to check to see if an image is predicted to contain a dog by the pre-trained ResNet-50 model, we need only check if the `ResNet50_predict_labels` function above returns a value between 151 and 268 (inclusive).
+
+We use these ideas to complete the `dog_detector` function below, which returns True if a dog is detected in an image (and False if not).
+
+```
+### returns "True" if a dog is detected in the image stored at img_path
+def dog_detector(img_path):
+    prediction = ResNet50_predict_labels(img_path)
+    return ((prediction <= 268) & (prediction >= 151))
+ ```
+
+**(IMPLEMENTATION) Assess the Dog Detector***
+**Question 3:** Use the code cell below to test the performance of your dog_detector function.
+
+- What percentage of the images in human_files_short have a detected dog?
+- What percentage of the images in dog_files_short have a detected dog?
+
+**Answer:**
+
+- There are 2 percentage of the images in human_files_short have a detected dog.
+- There are 100 percentage of the images in dog_files_short have a detected dog.
