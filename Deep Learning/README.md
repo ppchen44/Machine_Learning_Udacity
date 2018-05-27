@@ -287,3 +287,11 @@ print('There are %.2f%% percent dog images with a detected dog face' % ((sum(dog
 There are 2.00% percent human images with a detected dog face
 There are 100.00% percent dog images with a detected dog face
 ```
+```
+print('There are %.2f%% percent human images with a detected dog face' % ((sum(dogface_detected_in_human)/100.0)*100))
+print('There are %.2f%% percent dog images with a detected dog face' % ((sum(dogface_detected_in_dog)/100.0)*100))
+```
+```
+There are 2.00% percent human images with a detected dog face
+There are 100.00% percent dog images with a detected dog face
+```
