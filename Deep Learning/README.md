@@ -380,3 +380,30 @@ Trainable params: 19,189
 Non-trainable params: 0
 _________________________________________________________________
 ```
+#### Compile the Model
+```
+model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
+```
+
+**(IMPLEMENTATION) Train the Model**
+
+Train your model in the code cell below. Use model checkpointing to save the model that attains the best validation loss.
+
+You are welcome to augment the training data, but this is not a requirement.
+
+```
+from keras.callbacks import ModelCheckpoint  
+
+### TODO: specify the number of epochs that you would like to use to train the model.
+
+epochs = 10
+
+### Do NOT modify the code below this line.
+
+checkpointer = ModelCheckpoint(filepath='saved_models/weights.best.from_scratch.hdf5', 
+                               verbose=1, save_best_only=True)
+
+model.fit(train_tensors, train_targets, 
+          validation_data=(valid_tensors, valid_targets),
+          epochs=epochs, batch_size=20, callbacks=[checkpointer], verbose=1)
+```
