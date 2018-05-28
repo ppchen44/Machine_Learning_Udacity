@@ -407,3 +407,37 @@ model.fit(train_tensors, train_targets,
           validation_data=(valid_tensors, valid_targets),
           epochs=epochs, batch_size=20, callbacks=[checkpointer], verbose=1)
 ```
+```
+
+Train on 6680 samples, validate on 835 samples
+Epoch 1/10
+6660/6680 [============================>.] - ETA: 1s - loss: 4.8831 - acc: 0.0093Epoch 00000: val_loss improved from inf to 4.87134, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 373s - loss: 4.8831 - acc: 0.0094 - val_loss: 4.8713 - val_acc: 0.0108
+Epoch 2/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.8666 - acc: 0.0131Epoch 00001: val_loss improved from 4.87134 to 4.85588, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 304s - loss: 4.8667 - acc: 0.0130 - val_loss: 4.8559 - val_acc: 0.0180
+Epoch 3/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.8322 - acc: 0.0171Epoch 00002: val_loss improved from 4.85588 to 4.82620, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 279s - loss: 4.8323 - acc: 0.0172 - val_loss: 4.8262 - val_acc: 0.0180
+Epoch 4/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.7847 - acc: 0.0180Epoch 00003: val_loss improved from 4.82620 to 4.79278, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 272s - loss: 4.7850 - acc: 0.0181 - val_loss: 4.7928 - val_acc: 0.0287
+Epoch 5/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.7509 - acc: 0.0192Epoch 00004: val_loss improved from 4.79278 to 4.76127, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 265s - loss: 4.7508 - acc: 0.0192 - val_loss: 4.7613 - val_acc: 0.0216
+Epoch 6/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.7213 - acc: 0.0260Epoch 00005: val_loss improved from 4.76127 to 4.75532, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 262s - loss: 4.7219 - acc: 0.0259 - val_loss: 4.7553 - val_acc: 0.0228
+Epoch 7/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.6942 - acc: 0.0269Epoch 00006: val_loss improved from 4.75532 to 4.73605, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 264s - loss: 4.6940 - acc: 0.0268 - val_loss: 4.7361 - val_acc: 0.0251
+Epoch 8/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.6723 - acc: 0.0336Epoch 00007: val_loss improved from 4.73605 to 4.73030, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 293s - loss: 4.6720 - acc: 0.0338 - val_loss: 4.7303 - val_acc: 0.0228
+Epoch 9/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.6520 - acc: 0.0288Epoch 00008: val_loss improved from 4.73030 to 4.71218, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 265s - loss: 4.6523 - acc: 0.0287 - val_loss: 4.7122 - val_acc: 0.0263
+Epoch 10/10
+6660/6680 [============================>.] - ETA: 0s - loss: 4.6307 - acc: 0.0348Epoch 00009: val_loss improved from 4.71218 to 4.70778, saving model to saved_models/weights.best.from_scratch.hdf5
+6680/6680 [==============================] - 265s - loss: 4.6298 - acc: 0.0352 - val_loss: 4.7078 - val_acc: 0.0251
+```
