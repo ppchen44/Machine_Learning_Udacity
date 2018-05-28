@@ -441,3 +441,35 @@ Epoch 10/10
 6660/6680 [============================>.] - ETA: 0s - loss: 4.6307 - acc: 0.0348Epoch 00009: val_loss improved from 4.71218 to 4.70778, saving model to saved_models/weights.best.from_scratch.hdf5
 6680/6680 [==============================] - 265s - loss: 4.6298 - acc: 0.0352 - val_loss: 4.7078 - val_acc: 0.0251
 ```
+
+#### Load the Model with the Best Validation Loss
+```
+model.load_weights('saved_models/weights.best.from_scratch.hdf5')
+```
+#### Test the Model
+
+Try out your model on the test dataset of dog images. Ensure that your test accuracy is greater than 1%.
+```
+# get index of predicted dog breed for each image in test set
+dog_breed_predictions = [np.argmax(model.predict(np.expand_dims(tensor, axis=0))) for tensor in test_tensors]
+
+# report test accuracy
+test_accuracy = 100*np.sum(np.array(dog_breed_predictions)==np.argmax(test_targets, axis=1))/len(dog_breed_predictions)
+print('Test accuracy: %.4f%%' % test_accuracy)
+```
+```
+Test accuracy: 3.0000%
+```
+
+### Step 4: Use a CNN to Classify Dog Breeds
+
+To reduce training time without sacrificing accuracy, we show you how to train a CNN using transfer learning. In the following step, you will get a chance to use transfer learning to train your own CNN.
+
+#### Obtain Bottleneck Features
+
+```
+bottleneck_features = np.load('bottleneck_features/DogVGG16Data.npz')
+train_VGG16 = bottleneck_features['train']
+valid_VGG16 = bottleneck_features['valid']
+test_VGG16 = bottleneck_features['test']
+```
