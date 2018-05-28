@@ -312,6 +312,8 @@ We also mention that random chance presents an exceptionally low bar: setting as
 Remember that the practice is far ahead of the theory in deep learning. Experiment with many different architectures, and trust your intuition. And, of course, have fun!
 
 #### Pre-process the Data
+
+We rescale the images by dividing every pixel in every image by 255.
 ```
 from PIL import ImageFile                            
 ImageFile.LOAD_TRUNCATED_IMAGES = True                 
@@ -332,5 +334,25 @@ Create a CNN to classify dog breed. At the end of your code cell block, summariz
  We have imported some Python modules to get you started, but feel free to import as many modules as you need. If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains >1% test accuracy in 5 epochs:
 
 
+**Question 4:** Outline the steps you took to get to your final CNN architecture and your reasoning at each step. If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.
 
-We rescale the images by dividing every pixel in every image by 255.
+**Answer:***
+```
+from keras.layers import Conv2D, MaxPooling2D, GlobalAveragePooling2D
+from keras.layers import Dropout, Flatten, Dense
+from keras.models import Sequential
+
+model = Sequential()
+model.add(Conv2D(filters=16, kernel_size=2, strides=1, activation='relu',input_shape=(224,224,3)))
+model.add(MaxPooling2D(pool_size=2, strides=2))
+model.add(Conv2D(filters=32, kernel_size=2, strides=1, activation='relu'))
+model.add(MaxPooling2D(pool_size=2, strides=2))
+model.add(Conv2D(filters=64,kernel_size=2,strides=1,activation='relu'))
+model.add(MaxPooling2D(pool_size=2, strides=2))
+model.add(GlobalAveragePooling2D())
+#model.add(Flatten())
+model.add(Dense(133, activation='softmax'))
+### TODO: Define your architecture.
+
+model.summary()
+```
