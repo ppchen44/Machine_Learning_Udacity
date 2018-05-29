@@ -499,3 +499,10 @@ Trainable params: 68,229
 Non-trainable params: 0
 _________________________________________________________________
 ```
+
+#### Compile the Model
+
+```
+VGG16_modelVGG16_mo .compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+```
+
