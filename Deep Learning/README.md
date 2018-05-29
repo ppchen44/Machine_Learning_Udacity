@@ -477,3 +477,25 @@ test_VGG16 = bottleneck_features['test']
 #### Model Architecture
 
 The model uses the the pre-trained VGG-16 model as a fixed feature extractor, where the last convolutional output of VGG-16 is fed as input to our model. We only add a global average pooling layer and a fully connected layer, where the latter contains one node for each dog category and is equipped with a softmax.
+
+```
+VGG16_model = Sequential()
+VGG16_model.add(GlobalAveragePooling2D(input_shape=train_VGG16.shape[1:]))
+VGG16_model.add(Dense(133, activation='softmax'))
+
+VGG16_model.summary()
+```
+
+```
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+global_average_pooling2d_6 ( (None, 512)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 133)               68229     
+=================================================================
+Total params: 68,229
+Trainable params: 68,229
+Non-trainable params: 0
+_________________________________________________________________
+```
