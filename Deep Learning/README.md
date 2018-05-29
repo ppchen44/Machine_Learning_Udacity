@@ -473,3 +473,7 @@ train_VGG16 = bottleneck_features['train']
 valid_VGG16 = bottleneck_features['valid']
 test_VGG16 = bottleneck_features['test']
 ```
+
+#### Model Architecture
+
+The model uses the the pre-trained VGG-16 model as a fixed feature extractor, where the last convolutional output of VGG-16 is fed as input to our model. We only add a global average pooling layer and a fully connected layer, where the latter contains one node for each dog category and is equipped with a softmax.
