@@ -579,3 +579,9 @@ Epoch 20/20
 6580/6680 [============================>.] - ETA: 0s - loss: 7.9003 - acc: 0.5023Epoch 00019: val_loss did not improve
 6680/6680 [==============================] - 1s - loss: 7.8984 - acc: 0.5024 - val_loss: 8.8751 - val_acc: 0.3904
 ```
+
+#### Load the Model with the Best Validation Loss
+
+```
+VGG16_model.load_weights('saved_models/weights.best.VGG16.hdf5')
+```
