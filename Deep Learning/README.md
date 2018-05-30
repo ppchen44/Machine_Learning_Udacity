@@ -686,6 +686,6 @@ Create a CNN to classify dog breed. At the end of your code cell block, summariz
 
 **Answer:**
 
-- Resnet50_model = Sequential() to create a neural network model.
-- Resnet50_model.add(GlobalAveragePooling2D(input_shape=train_Resnet50.shape[1:])) to add a global average pooling layer, using pre-trained Resnet50 model as input.
-- Resnet50_model.add(Dense(133, activation='softmax')) to add a final dense layer with node 133, and it will give the probabilities for all nodes.
+- `Resnet50_model = Sequential()` to create a neural network model.
+- `Resnet50_model.add(GlobalAveragePooling2D(input_shape=train_Resnet50.shape[1:]))` to add a global average pooling layer, using pre-trained `Resnet50` model as input.
+- `Resnet50_model.add(Dense(133, activation='softmax')`) to add a final dense layer with node 133, and it will give the probabilities for all nodes.
