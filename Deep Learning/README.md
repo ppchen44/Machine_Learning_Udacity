@@ -670,3 +670,22 @@ In the code block below, extract the bottleneck features corresponding to the tr
 
 `test_{network} = bottleneck_features['test']`
 
+```
+### TODO: Obtain bottleneck features from another pre-trained CNN.
+bottleneck_features = np.load('bottleneck_features/DogResnet50Data.npz')
+train_Resnet50 = bottleneck_features['train']
+valid_Resnet50 = bottleneck_features['valid']
+test_Resnet50 = bottleneck_features['test']
+```
+#### (IMPLEMENTATION) Model Architecture
+Create a CNN to classify dog breed. At the end of your code cell block, summarize the layers of your model by executing the line:
+
+    `<your model's name>.summary()`
+    
+**Question 5:** Outline the steps you took to get to your final CNN architecture and your reasoning at each step. Describe why you think the architecture is suitable for the current problem.    
+
+**Answer:**
+
+- Resnet50_model = Sequential() to create a neural network model.
+- Resnet50_model.add(GlobalAveragePooling2D(input_shape=train_Resnet50.shape[1:])) to add a global average pooling layer, using pre-trained Resnet50 model as input.
+- Resnet50_model.add(Dense(133, activation='softmax')) to add a final dense layer with node 133, and it will give the probabilities for all nodes.
