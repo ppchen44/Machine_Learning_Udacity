@@ -663,6 +663,10 @@ where {network}, in the above filename, can be one of VGG19, Resnet50, Inception
 In the code block below, extract the bottleneck features corresponding to the train, test, and validation sets by running the following:
 
 `bottleneck_features = np.load('bottleneck_features/Dog{network}Data.npz')`
+
 `train_{network} = bottleneck_features['train']`
+
 `valid_{network} = bottleneck_features['valid']`
+
 `test_{network} = bottleneck_features['test']`
+
