@@ -710,3 +710,26 @@ Trainable params: 272,517
 Non-trainable params: 0
 _________________________________________________________________
 ```
+#### (IMPLEMENTATION) Compile the Model
+```
+### TODO: Compile the model.
+Resnet50_model.compile(loss='categorical_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
+```
+#### (IMPLEMENTATION) Train the Model
+Train your model in the code cell below. Use model checkpointing to save the model that attains the best validation loss.
+
+You are welcome to augment the training data, but this is not a requirement.
+```
+### TODO: Train the model.### TODO 
+checkpointer = ModelCheckpoint(filepath='saved_models/weights.best.Resnet50.hdf5',
+                               verbose=1, save_best_only=True)
+
+Resnet50_model.fit(train_Resnet50, train_targets,
+                   validation_data=(valid_Resnet50, valid_targets),
+                   epochs=20, batch_size=20, callbacks=[checkpointer], verbose=1)
+```
+#### (IMPLEMENTATION) Load the Model with the Best Validation Loss
+```
+### TODO: Load the model weights with the best validation loss.
+Resnet50_model.load_weights('saved_models/weights.best.Resnet50.hdf5')
+```
