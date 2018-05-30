@@ -643,3 +643,26 @@ print train_targets[0]
   0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
   0.  0.  0.  0.  0.  0.  0.]
 ```
+
+### Step 5: Create a CNN to Classify Dog Breeds (using Transfer Learning)
+
+You will now use transfer learning to create a CNN that can identify dog breed from images. Your CNN must attain at least 60% accuracy on the test set.
+
+In Step 4, we used transfer learning to create a CNN using VGG-16 bottleneck features. In this section, you must use the bottleneck features from a different pre-trained model. To make things easier for you, we have pre-computed the features for all of the networks that are currently available in Keras:
+- VGG-19 bottleneck features
+- ResNet-50 bottleneck features
+- Inception bottleneck features
+- Xception bottleneck features
+The files are encoded as such:
+
+Dog{network}Data.npz
+
+where {network}, in the above filename, can be one of VGG19, Resnet50, InceptionV3, or Xception. Pick one of the above architectures, download the corresponding bottleneck features, and store the downloaded file in the bottleneck_features/ folder in the repository.
+
+(IMPLEMENTATION) Obtain Bottleneck Features
+In the code block below, extract the bottleneck features corresponding to the train, test, and validation sets by running the following:
+
+`bottleneck_features = np.load('bottleneck_features/Dog{network}Data.npz')
+train_{network} = bottleneck_features['train']
+valid_{network} = bottleneck_features['valid']
+test_{network} = bottleneck_features['test']`
