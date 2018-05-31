@@ -788,4 +788,24 @@ Some sample output for our algorithm is provided below, but feel free to design 
 
 Sample Human Output
 
-#### (IMPLEMENTATION) Write your Algorithm¶
+#### (IMPLEMENTATION) Write your Algorithm
+
+```
+### TODO: Write your algorithm.
+### Feel free to use as many code cells as needed.
+
+testImage = np.array(glob("testImages/*"))
+def detect_dog(testImage):
+    for i in range(len(testImage)):
+        if face_detector(testImage[i]) == True:
+            print 'Hello, human!'
+        elif dog_detector(testImage[i])== True:
+            print "Hey, it's dog!"
+        else:
+            print 'There is something wrong with your algorithm!'
+        pic = cv2.cvtColor(cv2.imread(testImage[i]), cv2.COLOR_BGR2RGB)
+        plt.imshow(pic)
+        plt.show()
+        print 'You look like a ...'
+        print Resnet50_predict_breed(testImage[i])
+```
