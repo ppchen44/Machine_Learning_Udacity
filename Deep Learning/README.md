@@ -748,3 +748,28 @@ print('Test accuracy: %.4f%%' % test_accuracy)
 ```
 Test accuracy: 80.0000%
 ```
+
+#### (IMPLEMENTATION) Predict Dog Breed with the Model
+
+Write a function that takes an image path as input and returns the dog breed (Affenpinscher, Afghan_hound, etc) that is predicted by your model.
+
+Similar to the analogous function in Step 5, your function should have three steps:
+
+- Extract the bottleneck features corresponding to the chosen CNN model.
+- Supply the bottleneck features as input to the model to return the predicted vector. Note that the argmax of this prediction vector gives the index of the predicted dog breed.
+- Use the dog_names array defined in Step 0 of this notebook to return the corresponding breed.
+
+The functions to extract the bottleneck features can be found in `extract_bottleneck_features.py`, and they have been imported in an earlier code cell. To obtain the bottleneck features corresponding to your chosen CNN architecture, you need to use the function
+
+extract_{network}
+
+where {network}, in the above filename, should be one of VGG19, Resnet50, InceptionV3, or Xception.
+
+```
+### TODO: Write a function that takes a path to an image as input
+### and returns the dog breed that is predicted by the model.
+def Resnet50_predict_breed(img_path):
+    bottleneck_feature = extract_Resnet50(path_to_tensor(img_path))
+    predicted_vector = Resnet50_model.predict(bottleneck_feature)
+    return dog_names[np.argmax(predicted_vector)]
+```
