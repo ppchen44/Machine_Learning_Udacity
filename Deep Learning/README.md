@@ -733,3 +733,18 @@ Resnet50_model.fit(train_Resnet50, train_targets,
 ### TODO: Load the model weights with the best validation loss.
 Resnet50_model.load_weights('saved_models/weights.best.Resnet50.hdf5')
 ```
+
+#### (IMPLEMENTATION) Test the Model
+
+Try out your model on the test dataset of dog images. Ensure that your test accuracy is greater than 60%.
+
+```
+### TODO: Calculate classification accuracy on the test dataset.
+Resnet50_predictions = [np.argmax(Resnet50_model.predict(np.expand_dims(feature, axis=0))) for feature in test_Resnet50]
+
+test_accuracy = 100*np.sum(np.array(Resnet50_predictions)==np.argmax(test_targets, axis=1))/len(Resnet50_predictions)
+print('Test accuracy: %.4f%%' % test_accuracy)
+```
+```
+Test accuracy: 80.0000%
+```
