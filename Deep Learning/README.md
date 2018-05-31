@@ -773,3 +773,19 @@ def Resnet50_predict_breed(img_path):
     predicted_vector = Resnet50_model.predict(bottleneck_feature)
     return dog_names[np.argmax(predicted_vector)]
 ```
+
+### Step 6: Write your Algorithm
+
+Write an algorithm that accepts a file path to an image and first determines whether the image contains a human, dog, or neither. Then,
+
+- if a **dog** is detected in the image, return the predicted breed.
+- if a **human** is detected in the image, return the resembling dog breed.
+- if **neither** is detected in the image, provide output that indicates an error.
+
+You are welcome to write your own functions for detecting humans and dogs in images, but feel free to use the `face_detector` and `dog_detector` functions developed above. You are **required** to use your CNN from Step 5 to predict dog breed.
+
+Some sample output for our algorithm is provided below, but feel free to design your own user experience!
+
+Sample Human Output
+
+#### (IMPLEMENTATION) Write your Algorithm¶
