@@ -809,3 +809,12 @@ def detect_dog(testImage):
         print 'You look like a ...'
         print Resnet50_predict_breed(testImage[i])
 ```
+```
+detect_dog(testImage)
+```
+```
+Hello, human!
+
+You look like a ...
+Dogue_de_bordeaux
+```
