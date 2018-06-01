@@ -818,3 +818,11 @@ Hello, human!
 You look like a ...
 Dogue_de_bordeaux
 ```
+### Step 7: Test Your Algorithm
+
+In this section, you will take your new algorithm for a spin! What kind of dog does the algorithm think that you look like? If you have a dog, does it predict your dog's breed accurately? If you have a cat, does it mistakenly think that your cat is a dog?
+
+#### (IMPLEMENTATION) Test Your Algorithm on Sample Images!
+
+Test your algorithm at least six images on your computer. Feel free to use any images you like. Use at least two human and two dog images.
+
