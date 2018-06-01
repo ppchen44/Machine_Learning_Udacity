@@ -835,3 +835,11 @@ Test your algorithm at least six images on your computer. Feel free to use any i
     - Increase the number of epochs
     - Increase the number of batch_size
     - Add a Dropout layer
+
+```
+## TODO: Execute your algorithm from Step 6 on
+## at least 6 images on your computer.
+## Feel free to use as many code cells as needed.
+testFile=np.array(glob("testfile/*"))
+detect_dog(testFile)
+```
