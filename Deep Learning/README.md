@@ -826,3 +826,4 @@ In this section, you will take your new algorithm for a spin! What kind of dog d
 
 Test your algorithm at least six images on your computer. Feel free to use any images you like. Use at least two human and two dog images.
 
+**Question 6:** Is the output better than you expected :) ? Or worse :( ? Provide at least three possible points of improvement for your algorithm.
