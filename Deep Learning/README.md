@@ -827,3 +827,11 @@ In this section, you will take your new algorithm for a spin! What kind of dog d
 Test your algorithm at least six images on your computer. Feel free to use any images you like. Use at least two human and two dog images.
 
 **Question 6:** Is the output better than you expected :) ? Or worse :( ? Provide at least three possible points of improvement for your algorithm.
+
+**Answer:**
+
+- The output is a little bit worse than my expected. It detected all human faces and dog faces, and it also didn't give me a dog face or human face when the image is cat. And the algorithm correctly predicted German_shepherd_dog, but it failed on Cairn Terrier Mix since it predicted it as Norfolk_terrier.
+- Possible points of improvement my algorithm:
+    - Increase the number of epochs
+    - Increase the number of batch_size
+    - Add a Dropout layer
