@@ -843,3 +843,13 @@ Test your algorithm at least six images on your computer. Feel free to use any i
 testFile=np.array(glob("testfile/*"))
 detect_dog(testFile)
 ```
+
+```
+Hello, human!
+
+You look like a ...
+Maltese
+
+Hey, it's dog!
+You look like a ...
+German_shepherd_dog
