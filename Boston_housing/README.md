@@ -380,3 +380,13 @@ print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params
 **Hint:** The answer comes from the output of the code snipped above.
 
 **Answer:** Maximum depth is 4 for the optimal model. The result just likes what I have gussed in Questin 6.
+
+#### Question 10 - Predicting Selling Prices
+
+Imagine that you were a real estate agent in the Boston area looking to use this model to help price homes owned by your clients that they wish to sell. You have collected the following information from three of your clients:
+
+
+Feature	Client 1	Client 2	Client 3
+Total number of rooms in home	5 rooms	4 rooms	8 rooms
+Neighborhood poverty level (as %)	17%	32%	3%
+Student-teacher ratio of nearby schools	15-to-1	22-to-1	12-to-1
