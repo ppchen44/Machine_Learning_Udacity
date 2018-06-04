@@ -363,3 +363,7 @@ def fit_model(X, y):
 
 #### Making Predictions
 Once a model has been trained on a given set of data, it can now be used to make predictions on new sets of input data. In the case of a decision tree regressor, the model has learned what the best questions to ask about the input data are, and can respond with a prediction for the **target variable**. You can use these predictions to gain information about data where the value of the target variable is unknown — such as data the model was not trained on.
+
+#### Question 9 - Optimal Model
+- What maximum depth does the optimal model have? How does this result compare to your guess in **Question 6**?
+Run the code block below to fit the decision tree regressor to the training data and produce an optimal model.
