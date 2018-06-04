@@ -375,3 +375,8 @@ reg = fit_model(X_train, y_train)
 # Produce the value for 'max_depth'
 print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params()['max_depth'])
 ```
+``Parameter 'max_depth' is 4 for the optimal model.``
+
+Hint: The answer comes from the output of the code snipped above.
+
+Answer: Maximum depth is 4 for the optimal model. The result just likes what I have gussed in Questin 6.
