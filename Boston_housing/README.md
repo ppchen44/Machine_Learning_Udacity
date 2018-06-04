@@ -360,3 +360,6 @@ def fit_model(X, y):
     # Return the optimal model after fitting the data
     return grid.best_estimator_
 ```
+
+#### Making Predictions
+Once a model has been trained on a given set of data, it can now be used to make predictions on new sets of input data. In the case of a decision tree regressor, the model has learned what the best questions to ask about the input data are, and can respond with a prediction for the **target variable**. You can use these predictions to gain information about data where the value of the target variable is unknown — such as data the model was not trained on.
