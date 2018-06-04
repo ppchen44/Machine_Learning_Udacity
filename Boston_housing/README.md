@@ -306,3 +306,21 @@ When thinking about how k-fold cross validation helps grid search, think about t
 - In k-fold cross-validation, the original sample is randomly partitioned into k equal sized subsamples. Of the k subsamples, a single subsample is retained as the validation data for testing the model, and the remaining k − 1 subsamples are used as training data. Then we just train our model k times. Each time using a different subsmaples as our testing set.
 - If grid search only uses a particular subset of data for training or testing, it just likes throwing away some data that could be useful for training our algorithm. k-fold cv could help alleviate this situation by runing the algorithm k times and each time using a different subsamples as testing set and the remaining points as our training set.
 - Training the model on k-fold dataset for k times, we calculated average scores of metrics each time. Choose the parameter which concludes to highest scores of metric as our best prarameter for the model.
+
+#### Implementation: Fitting a Model
+
+Your final implementation requires that you bring everything together and train a model using the **decision tree algorithm**. To ensure that you are producing an optimized model, you will train the model using the grid search technique to optimize the 'max_depth' parameter for the decision tree. The 'max_depth' parameter can be thought of as how many questions the decision tree algorithm is allowed to ask about the data before making a prediction. Decision trees are part of a class of algorithms called `supervised learning algorithms`.
+
+In addition, you will find your implementation is using `ShuffleSplit()` for an alternative form of cross-validation (see the 'cv_sets' variable). While it is not the K-Fold cross-validation technique you describe in **Question 8**, this type of cross-validation technique is just as useful!. The `ShuffleSplit()` implementation below will create 10 ('n_splits') shuffled sets, and for each shuffle, 20% ('test_size') of the data will be used as the validation set. While you're working on your implementation, think about the contrasts and similarities it has to the K-fold cross-validation technique.
+
+Please note that ShuffleSplit has different parameters in `scikit-learn` versions 0.17 and 0.18. For the `fit_model function` in the code cell below, you will need to implement the following:
+
+- Use `DecisionTreeRegressor from sklearn.tree` to create a decision tree regressor object.
+    - Assign this object to the 'regressor' variable.
+- Create a dictionary for `max_depth` with the values from 1 to 10, and assign this to the `params` variable.
+- Use `make_scorer from sklearn.metrics` to create a scoring function object.
+    - Pass the `performance_metric` function as a parameter to the object.
+    - Assign this scoring function to the `scoring_fnc` variable.
+Use GridSearchCV from sklearn.grid_search to create a grid search object.
+Pass the variables 'regressor', 'params', 'scoring_fnc', and 'cv_sets' as parameters to the object.
+Assign the GridSearchCV object to the 'grid' variable.
