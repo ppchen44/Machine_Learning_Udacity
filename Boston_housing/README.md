@@ -367,3 +367,11 @@ Once a model has been trained on a given set of data, it can now be used to make
 #### Question 9 - Optimal Model
 - What maximum depth does the optimal model have? How does this result compare to your guess in **Question 6**?
 Run the code block below to fit the decision tree regressor to the training data and produce an optimal model.
+
+```
+# Fit the training data to the model using grid search
+reg = fit_model(X_train, y_train)
+
+# Produce the value for 'max_depth'
+print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params()['max_depth'])
+```
