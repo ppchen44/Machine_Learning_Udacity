@@ -321,6 +321,6 @@ Please note that ShuffleSplit has different parameters in `scikit-learn` version
 - Use `make_scorer from sklearn.metrics` to create a scoring function object.
     - Pass the `performance_metric` function as a parameter to the object.
     - Assign this scoring function to the `scoring_fnc` variable.
-Use GridSearchCV from sklearn.grid_search to create a grid search object.
-Pass the variables 'regressor', 'params', 'scoring_fnc', and 'cv_sets' as parameters to the object.
-Assign the GridSearchCV object to the 'grid' variable.
+- Use `GridSearchCV from sklearn.grid_search` to create a grid search object.
+    - Pass the variables `regressor`, `params`, `scoring_fnc`, and `cv_sets` as parameters to the object.
+    - Assign the `GridSearchCV` object to the `grid` variable.
