@@ -377,6 +377,6 @@ print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params
 ```
 ``Parameter 'max_depth' is 4 for the optimal model.``
 
-Hint: The answer comes from the output of the code snipped above.
+**Hint:** The answer comes from the output of the code snipped above.
 
-Answer: Maximum depth is 4 for the optimal model. The result just likes what I have gussed in Questin 6.
+**Answer:** Maximum depth is 4 for the optimal model. The result just likes what I have gussed in Questin 6.
