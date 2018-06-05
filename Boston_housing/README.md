@@ -397,3 +397,19 @@ Student-teacher ratio of nearby schools	    15-to-1	                        22-t
 **Hint:** Use the statistics you calculated in the **Data Exploration** section to help justify your response. Of the three clients, client 3 has has the biggest house, in the best public school neighborhood with the lowest poverty level; while client 2 has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.
 
 Run the code block below to have your optimized model make predictions for each client's home.
+
+```
+# Produce a matrix for client data
+client_data = [[5, 17, 15], # Client 1
+               [4, 32, 22], # Client 2
+               [8, 3, 12]]  # Client 3
+
+# Show predictions
+for i, price in enumerate(reg.predict(client_data)):
+    print "Predicted selling price for Client {}'s home: ${:,.2f}".format(i+1, price)
+```
+```
+Predicted selling price for Client 1's home: $405,946.15
+Predicted selling price for Client 2's home: $222,337.50
+Predicted selling price for Client 3's home: $954,712.50
+```
