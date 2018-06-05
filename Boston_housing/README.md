@@ -450,3 +450,8 @@ for i in client_data:
     index += 1
     print 'The predicted {} nearest neighbors price for home {} is: ${:,.2f}'.format(num_neighbors, index, val)
 ```
+```
+The predicted 5 nearest neighbors price for home 1 is: $372,540.00
+The predicted 5 nearest neighbors price for home 2 is: $162,120.00
+The predicted 5 nearest neighbors price for home 3 is: $897,120.00
+```
