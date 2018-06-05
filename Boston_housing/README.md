@@ -413,3 +413,17 @@ Predicted selling price for Client 1's home: $405,946.15
 Predicted selling price for Client 2's home: $222,337.50
 Predicted selling price for Client 3's home: $954,712.50
 ```
+```
+print features.iloc[prices.argmin(),:], prices.min()
+print features.iloc[prices.argmax(),:], prices.max()
+```
+```
+RM          5.453
+LSTAT      30.590
+PTRATIO    20.200
+Name: 381, dtype: float64 105000.0
+RM          8.398
+LSTAT       5.910
+PTRATIO    13.000
+Name: 253, dtype: float64 1024800.0
+```
