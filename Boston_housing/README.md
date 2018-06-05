@@ -391,3 +391,9 @@ Total number of rooms in home	            5 rooms	                        4 room
 Neighborhood poverty level (as %)	         17%	                          32%	                      3%
 Student-teacher ratio of nearby schools	    15-to-1	                        22-to-1	                    12-to-1
 ```
+- What price would you recommend each client sell his/her home at?
+- Do these prices seem reasonable given the values for the respective features?
+
+**Hint:** Use the statistics you calculated in the **Data Exploration** section to help justify your response. Of the three clients, client 3 has has the biggest house, in the best public school neighborhood with the lowest poverty level; while client 2 has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.
+
+Run the code block below to have your optimized model make predictions for each client's home.
