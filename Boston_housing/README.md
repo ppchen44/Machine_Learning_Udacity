@@ -478,3 +478,17 @@ An optimal model is not necessarily a robust model. Sometimes, a model is either
 ```
 vs.PredictTrials(features, prices, fit_model, client_data)
 ```
+```
+Trial 1: $391,183.33
+Trial 2: $411,417.39
+Trial 3: $415,800.00
+Trial 4: $428,316.00
+Trial 5: $413,334.78
+Trial 6: $411,931.58
+Trial 7: $399,663.16
+Trial 8: $407,232.00
+Trial 9: $402,531.82
+Trial 10: $413,700.00
+
+Range in prices: $37,132.67
+```
