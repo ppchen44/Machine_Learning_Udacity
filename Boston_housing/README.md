@@ -455,3 +455,18 @@ The predicted 5 nearest neighbors price for home 1 is: $372,540.00
 The predicted 5 nearest neighbors price for home 2 is: $162,120.00
 The predicted 5 nearest neighbors price for home 3 is: $897,120.00
 ```
+```
+print 'The lower is ${} and the upper is ${} of one standard deviation'.format((mean_price -std_price), 
+                                                                               (mean_price +std_price))
+```
+```
+The lower is $289171.813241 and the upper is $619514.07633 of one standard deviation
+```
+**Answer:**
+
+For client 1, I would recommend sell her home at 405,946.15 dollars.
+For client 2, I would recommend sell her home at 222,337.50 dollars.
+For client 3, I would recommend sell her home at 954,712.50 dollars.
+Yes, I think that these prices seem reasonable given the values for the respective features. The selling price of client3's house is less than the maximum price of dataset. All features' values just like the values corresponding to the maximum price, so the price of client3's house should be close to amximum price. Moreover, the average price of 5 nearest neighbors of client3 is 897,120 dollars. So I think the predicted price of client3 is reasonable. The selling price of client2's house is greater than the minmum price of dataset. All features' values are better than the values corresponding to the minmum price. So the price of client2's house should a little higher than the minmum price. Moreover, the average price of 5 nearest neighbors of client2 is 162,120 dollars which is a little lower than the predicted price. The price of client1's house is between the minmum price and the maximum price and it is also in the range of one standard deviation of mean price. Moreover, the average price of 5 nearest neighbors of client2 is 372,540 dollars.
+We could see that all point predictions by the model of three cliens' home are higher than their 5 nearest neighbors' average price. This situation might be accidental events, but it is worth to explore in the furture.
+For all this, I still think all predicted prices for these three clients are reasonable.
