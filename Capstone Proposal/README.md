@@ -33,9 +33,7 @@ The better model will with smaller number of Mean Squared Error.
 2. Explore the dataset to know how many and what variables in there. Identify the target
 variable (logerror) and independent variables.
 3. Exploratory data analysis to know the distributions of target variable and explanatory
-variables. Calculate variance-covariance matrix of variables to know which variables are highly correlated. Dealing with missing values such as ‘fireplacecnt’, I will fill in 0 to NaN because NaN means there is no fireplace in the houses. Another type variable with
-  
-missing values is ‘propertylandusetypeid’, there is no any clue to know how to fill with missing values. For this kind of variable, I would conduct a knn algorithm to predict missing values based on all other variables.
+variables. Calculate variance-covariance matrix of variables to know which variables are highly correlated. Dealing with missing values such as ‘fireplacecnt’, I will fill in 0 to NaN because NaN means there is no fireplace in the houses. Another type variable with missing values is ‘propertylandusetypeid’, there is no any clue to know how to fill with missing values. For this kind of variable, I would conduct a knn algorithm to predict missing values based on all other variables.
 4. Encode categorical variables and split the dataset into train/test sets to make the data ready for models.
 5. Build the benchmark model, Multiple Regression, to calculate the evaluation metrics (Mean Absolute Error and MSE)
 6. Build and tune the LGBM model to the best model performance (the smallest Mean Absolute Error or MSE).
