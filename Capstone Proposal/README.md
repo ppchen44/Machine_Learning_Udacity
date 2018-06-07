@@ -1,4 +1,7 @@
 ## Software
+Python 
+Jupter notebook
+
 Libraries I used for this project
 import numpy as np
 import pandas as pd
