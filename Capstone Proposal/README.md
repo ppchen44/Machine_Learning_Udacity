@@ -1,8 +1,9 @@
 ## Software
 Python 
+
 Jupter notebook
 
-Libraries I used for this project
+## Libraries I used for this project
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
