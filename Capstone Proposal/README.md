@@ -1,7 +1,8 @@
 ## Software
+```
 Python 
-
 Jupter notebook
+```
 
 ## Libraries I used for this project
 ```
