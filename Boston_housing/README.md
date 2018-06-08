@@ -493,14 +493,3 @@ Trial 10: $413,700.00
 Range in prices: $37,132.67
 ```
 
-#### Question 11 - Applicability
-- In a few sentences, discuss whether the constructed model should or should not be used in a real-world setting.
-**Hint:** Take a look at the range in prices as calculated in the code snippet above. Some questions to answering:
-
-- How relevant today is data that was collected from 1978? How important is inflation?
-- Are the features present in the data sufficient to describe a home? Do you think factors like quality of apppliances in the home, square feet of the plot area, presence of pool or not etc should factor in?
-- Is the model robust enough to make consistent predictions?
-- Would data collected in an urban city like Boston be applicable in a rural city?
-- Is it fair to judge the price of an individual home based on the characteristics of the entire neighborhood?
-
-**Answer:** The data was collected from 1978 can not represent today because many things changed. Ecomony has been developing in past forty years. Inflation has been increasing which cause the price of houses has been increasing a lot. I think that the features presenting in the data are not sufficient to describe a home. For example, the age of a house, quality of appliances in the house, square feet of the plot area and presence of pool are factors which can describe a house. We should add more features in the model. The model is not robust enough to make consistent predictions which can be observed from results at previous cell. I think that the data collected in an urban city like Boston would not be applicable in a rural city. An individual house could be judged based on the characteristics of the entire neighborhood. If the neighborhood has very good elementary and high school, then many parents would like to buy a house there even though the house price is high.
