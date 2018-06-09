@@ -375,6 +375,7 @@ reg = fit_model(X_train, y_train)
 # Produce the value for 'max_depth'
 print "Parameter 'max_depth' is {} for the optimal model.".format(reg.get_params()['max_depth'])
 ```
+
 ``Parameter 'max_depth' is 4 for the optimal model.``
 
 **Hint:** The answer comes from the output of the code snipped above.
@@ -391,6 +392,7 @@ Total number of rooms in home	            5 rooms	                        4 room
 Neighborhood poverty level (as %)	         17%	                          32%	                      3%
 Student-teacher ratio of nearby schools	    15-to-1	                        22-to-1	                    12-to-1
 ```
+
 - What price would you recommend each client sell his/her home at?
 - Do these prices seem reasonable given the values for the respective features?
 
@@ -408,15 +410,18 @@ client_data = [[5, 17, 15], # Client 1
 for i, price in enumerate(reg.predict(client_data)):
     print "Predicted selling price for Client {}'s home: ${:,.2f}".format(i+1, price)
 ```
+
 ```
 Predicted selling price for Client 1's home: $405,946.15
 Predicted selling price for Client 2's home: $222,337.50
 Predicted selling price for Client 3's home: $954,712.50
 ```
+
 ```
 print features.iloc[prices.argmin(),:], prices.min()
 print features.iloc[prices.argmax(),:], prices.max()
 ```
+
 ```
 RM          5.453
 LSTAT      30.590
@@ -427,6 +432,7 @@ LSTAT       5.910
 PTRATIO    13.000
 Name: 253, dtype: float64 1024800.0
 ```
+
 ```
 from sklearn.neighbors import NearestNeighbors
 num_neighbors = 5
@@ -450,18 +456,22 @@ for i in client_data:
     index += 1
     print 'The predicted {} nearest neighbors price for home {} is: ${:,.2f}'.format(num_neighbors, index, val)
 ```
+
 ```
 The predicted 5 nearest neighbors price for home 1 is: $372,540.00
 The predicted 5 nearest neighbors price for home 2 is: $162,120.00
 The predicted 5 nearest neighbors price for home 3 is: $897,120.00
 ```
+
 ```
 print 'The lower is ${} and the upper is ${} of one standard deviation'.format((mean_price -std_price), 
                                                                                (mean_price +std_price))
 ```
+
 ```
 The lower is $289171.813241 and the upper is $619514.07633 of one standard deviation
 ```
+
 **Answer:**
 
 1. - For client 1, I would recommend sell her home at 405,946.15 dollars.
