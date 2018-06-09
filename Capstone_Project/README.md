@@ -275,7 +275,8 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, rando
 scaler = MinMaxScaler().fit(x_train) x_train = scaler.transform(x_train) x_test = scaler.transform(x_test)
 ```
 
-	- Convert the training data into LightGBM dataset format (this is mandatory for LightGBM training)
+Convert the training data into LightGBM dataset format (this is mandatory for LightGBM training)
+
 ```
 d_train = lgb.Dataset(x_train, label = y_train)
 ```
