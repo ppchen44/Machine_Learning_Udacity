@@ -502,3 +502,4 @@ Range in prices: $37,132.67
 - Is the model robust enough to make consistent predictions?
 - Would data collected in an urban city like Boston be applicable in a rural city?
 - Is it fair to judge the price of an individual home based on the characteristics of the entire neighborhood?
+
